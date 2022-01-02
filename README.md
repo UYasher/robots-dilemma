@@ -1,1 +1,8 @@
 # robots-dilemma
+The [prisoner's dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma) is a well-studied game in game theory. It is used to demostrate how rational actors can engage in behaviors which lead to socially sub-optimal outcomes. A well-known result is that many outcomes become possible, including socially optimal ones, in the iterated version of the game -- when the game is played repeatedly in succession. (This is a specific case of the [folk theorems](https://en.wikipedia.org/wiki/Folk_theorem_(game_theory)).)
+
+These outcomes are possible because the agents have knowledge about the actions which occured in previous iterations of the game. For example, an agent which defected in previous iterations of the game can be punished in future iterations, allowing the agents to maintain disciplined cooperation.
+
+This repo helps simulate what happens if we limit how much agents remember about past iterations of the game. In particular, we can limit the memory of the agents to a fixed, finite number of games, and then look at the payoffs that agent receives when playing against other agents. Let's call these agents with limited memory "robots". 
+
+All the code implementing the simulations can be found in `src/Lib.hs`. You can define robots using `makeRobot`, compute how two robots score against each other using `computeNRounds` and `scoreHistory`, or use montecarlo simulation to generate aggregate statics about robots using `randomRobot`, `monteCarloStats`, and `randomRobotMCStats`. Happy simulating! : ]
